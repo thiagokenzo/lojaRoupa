@@ -178,6 +178,15 @@ footer .container p {
     font-weight: bold;
 }
 
+.rodape {
+    margin: 0 auto;
+}
+
+.telefone {
+    margin: 0 auto;
+}
+
+
 .hero-sobre {
     height: 300px;
     background-color: #111;
