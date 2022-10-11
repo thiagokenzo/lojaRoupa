@@ -8,7 +8,7 @@ html, body {
     font-family: helvetica, sans-serif;
     font-size: 1rem;
     color: #000;
-    background-color: #f5f5f5f8;
+    background-color: #f7f5e1f8;
 }
 
 header nav {
@@ -118,7 +118,7 @@ main .container .roupas {
 }
 
 .roupa {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -127,7 +127,7 @@ main .container .roupas {
 }
 
 .roupa:hover {
-    background-color: #f5f5f5;
+    background-color: #e6e6e6d8;
     transition: 0.3s ease;
 }
 
@@ -154,16 +154,16 @@ main .container .roupas {
     padding: 10px;
     font-weight: bold;
     border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, .3);
+    border: 1px solid rgba(0, 0, 0, 0.726);
     text-transform: uppercase;
-    background-color: #000;
-    color: #fff;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     cursor: pointer;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
 }
 
 .roupa button:hover {
-    background-color: #dedede;
+    background-color: #bebebe;
     color: #000;
     transition: 0.3s ease;
 }
