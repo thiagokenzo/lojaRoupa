@@ -74,7 +74,7 @@ const loadSearch = (form, productsDivId) => {
 
                 const html = `
                     <article class="roupa">
-                        <img src="${produto.image}" height="300" width="300" alt="${produto.title}">
+                        <img src="${produto.image}" height="auto" width="auto" alt="${produto.title}">
                         <h4>${produto.title}</h4>
                         <h4>R$ ${produto.value}</h4>
                         <p>${produto.description}</p>
