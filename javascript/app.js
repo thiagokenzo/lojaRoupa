@@ -3,7 +3,7 @@ const loadProducts = (produtos, idDivParent) => {
     produtos.forEach( produto => {
 
         const html = `
-            <article class="prato">
+            <article class="roupa">
                 <img src="${produto.image}" height="300" width="300" alt="${produto.title}">
                 <h4>${produto.title}</h4>
                 <h4>R$ ${produto.value}</h4>
@@ -51,5 +51,44 @@ const checkout = phoneNumber => {
     })
 }
 
+const search = (products, searchTerm) => products.filter( product => product.title.includes(`${searchTerm}`) ||
+product.description.includes(`${searchTerm}`) )
+
+const loadSearch = (form, productsDivId) => {
+    const productsDiv = document.querySelector(productsDivId)
+    const inputSearch = form.querySelector('#inputSearch')
+
+    
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+        if (inputSearch.value != ''){
+    
+            productsDiv.querySelectorAll('.roupa').forEach(roupa => {
+                roupa.remove() 
+            })
+
+            const results = search(produtos, inputSearch.value)
+
+            results.forEach( produto => {
+
+                const html = `
+                    <article class="roupa">
+                        <img src="${produto.image}" height="300" width="300" alt="${produto.title}">
+                        <h4>${produto.title}</h4>
+                        <h4>R$ ${produto.value}</h4>
+                        <p>${produto.description}</p>
+                        <button type="button" onclick="modalTrigger(${produto.id})">Quero este produto</button>
+                    </article>
+                `
+        
+                productsDiv.insertAdjacentHTML('beforeend', html)
+            })
+        }
+    })
+    
+}
+
 loadProducts(produtos, '#product-div')
 checkout('5511963316256')
+loadSearch(document.querySelector('#formSearch'), '#product-div')

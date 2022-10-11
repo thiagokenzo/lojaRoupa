@@ -111,13 +111,13 @@ main .container h3{
     text-align: center;
 }
 
-main .container .pratos {
+main .container .roupas {
     display: flex;
     flex-direction: column;
     padding: 30px;
 }
 
-.prato {
+.roupa {
     background-color: #fff;
     margin-bottom: 20px;
     display: flex;
@@ -126,29 +126,29 @@ main .container .pratos {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
 }
 
-.prato:hover {
+.roupa:hover {
     background-color: #f5f5f5;
     transition: 0.3s ease;
 }
 
-.prato img {
+.roupa img {
     border-radius: 5px 5px 0px 0px;
     margin-bottom: 10px;
 }
 
-.prato h4 {
+.roupa h4 {
     padding: 0px 20px;
     text-align: center;
     font-size: 1.2rem;
     margin-bottom: 5px;
 }
 
-.prato p {
+.roupa p {
     padding: 0px 20px;
     font-size: 1rem;
 }
 
-.prato button {
+.roupa button {
     width: 50%;
     margin: 20px auto;
     padding: 10px;
@@ -162,7 +162,7 @@ main .container .pratos {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
 }
 
-.prato button:hover {
+.roupa button:hover {
     background-color: #dedede;
     color: #000;
     transition: 0.3s ease;
@@ -199,13 +199,13 @@ nav .contato{
 }
 
 @media (min-width: 600px) {
-    main .container .pratos {
+    main .container .roupas {
         flex-direction: row;
         justify-content: space-around;
         flex-wrap: wrap;
     }
 
-    main .container .pratos .prato{
+    main .container .roupas .roupa{
         width: 300px;
     }
 }
